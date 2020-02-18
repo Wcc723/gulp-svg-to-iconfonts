@@ -1,0 +1,18 @@
+{
+  "name": "gulp-sass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^3.1.1",
+    "gulp": "^4.0.2",
+    "gulp-consolidate": "^0.2.0",
+    "gulp-iconfont": "^10.0.3",
+    "gulp-plumber": "^1.2.1"
+  }
+}
