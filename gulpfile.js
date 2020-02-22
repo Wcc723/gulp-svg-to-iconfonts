@@ -1,4 +1,5 @@
 const gulp = require('gulp'),
+  del = require('del'),
   plumber = require('gulp-plumber');
 
 const async = require('async'),
@@ -9,6 +10,10 @@ const path = {
   source: './source/',
   public: './public/'
 }
+
+gulp.task('clean', () => {
+  return del(['./public/**/*'])
+});
 
 // icon fonts
 gulp.task('iconfonts', function(done){
@@ -48,5 +53,5 @@ gulp.task('others', function() {
     .pipe(gulp.dest(path.public));
 });
 
-gulp.task('default', gulp.series(['iconfonts', 'others']));
+gulp.task('default', gulp.series(['clean', 'iconfonts', 'others']));
 
